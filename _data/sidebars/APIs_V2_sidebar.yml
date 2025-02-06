@@ -4,7 +4,7 @@
 
 entries:
 - title: Sidebar
-  product: APIs V2
+  product: Connekta APIs V2
   version: 
   folders:
 
@@ -24,7 +24,7 @@ entries:
   - title: Empezando #Getting Started
     output: web, pdf
     folderitems:
-    - title: APIs V2
+    - title: Connekta APIs V2
       url: /APIs_V2.html
       output: web
 

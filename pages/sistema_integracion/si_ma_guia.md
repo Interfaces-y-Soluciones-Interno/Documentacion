@@ -1,7 +1,7 @@
 ---
-title: Módulo de Administración
+title: Connekta - Módulo de Administración
 keywords: 
-last_updated: Diciembre 18, 2024
+last_updated: Febrero 6, 2025
 tags: #[getting_started]
 #summary: "Inicio del Módulo de administración"
 sidebar: sistema_integracion_sidebar

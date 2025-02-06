@@ -1,7 +1,7 @@
 ---
-title: Acerca de APIs Versión dos
+title: Connekta - Acerca de APIs Versión dos
 keywords: 
-last_updated: Enero 17, 2025
+last_updated: Febrero 6, 2025
 tags: #[getting_started]
 #summary: "Inicio del Módulo de administración"
 sidebar: APIs_V2_sidebar

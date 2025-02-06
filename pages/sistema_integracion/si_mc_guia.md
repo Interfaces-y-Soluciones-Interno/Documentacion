@@ -1,7 +1,7 @@
 ---
-title: Módulo de Conectividad
+title: Connekta - Módulo de Conectividad
 keywords: 
-last_updated: Diciembre 18, 2024
+last_updated: Febrero 6, 2025
 tags: #[getting_started]
 #summary: "Inicio del Modulo de conectividad"
 sidebar: sistema_integracion_sidebar
