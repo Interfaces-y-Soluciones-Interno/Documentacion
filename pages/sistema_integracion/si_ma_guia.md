@@ -96,6 +96,31 @@ file="MA_10.png" alt="" %}
 
 Ejemplo de la creación de un usuario con rol Cliente 
 
+{% include inline_image.html
+file="MA_11.png" alt="" %}
+
+Al guardar el usuario aparece este mensaje y se envía un correo electrónico con las credenciales. 
+
+{% include inline_image.html
+file="MA_12.png" alt="" %}
+
+Al revisar el correo del usuario, llega uno marcado con remitente “Notificaciones connekta” llegan las credenciales (usuario y clave), si no llega a la bandeja de entrada, puede estar en "Correos no deseados", Ver en la imagen anterior como llega el mensaje, notar un botón para ir directamente al sistema, si se presiona el botón “Iniciar Sesión” lo envía directamente al sistema de integración para que inicie sesión.
+
+{% include inline_image.html
+file="MA_13.png" alt="" %}
+
+Aquí se inicia sesión, y en el primer ingreso se solicita el cambio de contraseña como se muestra a continuación: 
+
+{% include inline_image.html
+file="MA_14.png" alt="" %}
+
+### Token ###
+
+Esta información de Token (key y token) son las “llaves” necesarias para el uso o consumo de las API, conectores o consultas. 
+
+Al presionar el icono  Token, se muestra el siguiente formulario, para asignar el key y el token al usuario existente: 
+
+
 
 
 
