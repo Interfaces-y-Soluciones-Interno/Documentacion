@@ -51,3 +51,51 @@ Al presionar la opción “Administración”, la primera opción en la parte su
 file="MA_3.png" alt="" %}
 
 En esta guía inicialmente solo describiremos el funcionamiento del manejo de las opciones Usuarios y Permisos 
+
+## **Usuarios** ##
+
+Para gestionar usuarios debemos dar clic sobre la palabra “gestionar” de la opción Usuarios en el formulario de administración o imagen anterior, se nos debe mostrar un formulario similar al siguiente: 
+
+{% include inline_image.html
+file="MA_4.png" alt="" %}
+
+Se pueden ver los usuarios que hay creados para esta compañía, el formulario por defecto los muestra en páginas de tamaño diez con un encabezado y algunos iconos y otros elementos que ayudan con la operación. A continuación, se explicarán los componentes y funcionamiento del formulario. 
+
+Descripción de los iconos que se presentan en el formulario anterior. 
+
+{% include inline_image.html
+file="MA_5.png" alt="" %}
+
+Explicación de las columnas 
+
+{% include inline_image.html
+file="MA_6.png" alt="" %}
+
+{% include inline_image.html
+file="MA_7.png" alt="" %}
+Aquí se puede mencionar que la lista que se muestra de usuarios se puede ordenar por la columna que se desee, presionando con el Mouse sobre la columna que se desee ordenar, o permite filtrar la información, usando el icono de embudo con el Mouse en la columna y llenando la información necesaria para aplicar el filtro.
+
+A continuación, se explicará en detalle algunas de las opciones: 
+
+### Crear ###
+
+Al presionar el icono  Crear, se muestra el siguiente formulario, para ingresar la información del usuario: 
+
+{% include inline_image.html
+file="MA_8.png" alt="" %}
+
+Aquí se debe ingresar la información solicitada, Nombre, Apellido, Teléfono (opcional), Correo electrónico, Seleccionar el Rol y seleccionar la compañía del usuario, y al final presionar el botón guardar. 
+
+{% include inline_image.html
+file="MA_9.png" alt="" %}
+
+En la selección del rol aparecen los roles que la persona que está gestionando puede asignar al usuario que está creando. 
+
+{% include inline_image.html
+file="MA_10.png" alt="" %}
+
+Ejemplo de la creación de un usuario con rol Cliente 
+
+
+
+
