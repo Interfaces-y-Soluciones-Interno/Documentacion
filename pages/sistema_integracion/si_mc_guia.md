@@ -163,14 +163,18 @@ Los conectores son especificaciones realizadas por Siesa para facilitar la impor
 
 Al elegir la opción Conectores del Documentador 
 
---- Seguir aqui con las imagenes
+{% include inline_image.html
+file="MC_8.png" alt="" %}
+
+
 
 Se muestran todos los conectores estándar que se pueden usar para su compañía, aparece un listado ordenado por páginas. 
 
 En la parte Izquierda de cada registro de los conectores aparecen dos iconos con un funcionamiento especial, ver en la imagen siguiente los iconos resaltados en amarillo.  
 
  
-
+{% include inline_image.html
+file="MC_9.png" alt="" %}
  
 
  
@@ -179,19 +183,22 @@ El icono con forma de ojo permite ver el anexo:
 
  
 
- 
+ {% include inline_image.html
+file="MC_10.png" alt="" %}
 
  
 
 Este anexo lo que permite es ver las diferentes Secciones del conector, una sección en un conector es una parte de este que agrupa información relacionada, en el siguiente ejemplo hay una sección para el manejo de Terceros, es de anotar que todos los conectores manejados en Siesa tienen por defecto una sección inicial y una sección final adicional a sus secciones funcionales. 
 
  
-
+ {% include inline_image.html
+file="MC_11.png" alt="" %}
  
 
 Para seleccionar una sección específica del conector use el selector “Seleccione una sección” 
 
- 
+  {% include inline_image.html
+file="MC_12.png" alt="" %}
 
 Para este ejemplo del conector de Terceros, se tienen tres secciones, Inicial, Terceros y Final 
 
@@ -199,7 +206,8 @@ Para este ejemplo del conector de Terceros, se tienen tres secciones, Inicial, T
 
 Al seleccionar la sección Terceros nos aparecen todos los campos que se manejan en esta sección especifica, agrupados de a 10 ítems por página, en este caso tiene 35 Ítems y por tanto 35 campos en esta sección: 
 
- 
+   {% include inline_image.html
+file="MC_13.png" alt="" %}
 
  
 
@@ -210,18 +218,20 @@ Este detalle de los campos en una sección de un conector se usa para validar la
 El siguiente icono, símbolos mayor y menor, permite ver la guía del conector. 
 
  
-
+   {% include inline_image.html
+file="MC_14.png" alt="" %}
  
 
 Al seleccionar el icono “Ver guía” aparece el siguiente formulario: 
 
- 
+ {% include inline_image.html
+file="MC_15.png" alt="" %}
 
 Este formulario permite ver información asociada del conector. Y con esta información se puede dar manejo al API de los conectores. Esto lo veremos más adelante en este documento. Ver “Como se utilizan las APIs ...” 
 
  
 
- 
+ --- Seguir aqui con las imagenes
 
 ### **Consultas** 
 
