@@ -231,7 +231,7 @@ Este formulario permite ver información asociada del conector. Y con esta infor
 
  
 
- --- Seguir aqui con las imagenes
+
 
 ### **Consultas** 
 
@@ -240,15 +240,17 @@ Este formulario permite ver información asociada del conector. Y con esta infor
 Las consultas estándar son especificaciones creadas por Siesa para facilitar la consulta de alguna información del ERP de Siesa, las consultas se nombran al final con la información que devolverá al usarse. 
 
  
-
+{% include inline_image.html
+file="MC_16.png" alt="" %}
  
 
 Al presionar consultas, se muestran todas las consultas estándar que se pueden usar para su compañía. En el formulario el listado de las consultas se ordena por páginas, en el caso de la imagen anterior, se tienen 10 registros de consultas por página. 
 
 Al igual que en los conectores nos aparecen dos iconos en la parte izquierda de cada registro. 
 
- 
 
+{% include inline_image.html
+file="MC_17.png" alt="" %}
  
 
 Y sirven para lo mismo, pero en este caso aplica para las consultas, veamos el detalle: 
@@ -258,13 +260,15 @@ Y sirven para lo mismo, pero en este caso aplica para las consultas, veamos el d
 El icono con forma de ojo permite ver el anexo: 
 
  
-
+{% include inline_image.html
+file="MC_18.png" alt="" %}
  
 
 Veamos algo más, para aplicar un Filtro a los registros de la lista que se muestra, se puede aplicar tanto en Conectores como en consultas, en la parte derecha de cada registro, hay un icono en forma de embudo, este permite hacer un filtro a los registros, como se muestra a continuación: 
 
  
-
+{% include inline_image.html
+file="MC_19.png" alt="" %}
  
 
 En este caso aplicamos un filtro para buscar la consulta “Api_v2_Terceros” 
@@ -274,7 +278,8 @@ En este caso aplicamos un filtro para buscar la consulta “Api_v2_Terceros”
 Veamos al presionar el icono de Ver Anexo de la consulta API_v2_Terceros nos aparece lo siguiente: 
 
  
-
+{% include inline_image.html
+file="MC_20.png" alt="" %}
  
 
 Aparecen todos los campos que maneja la consulta, a diferencia de los conectores, aquí aparece toda la lista de los campos de la consulta en la misma página (en la imagen no se muestran todos los registros, es necesario navegar hacia abajo usando el Scroll para irlos viendo).  Describe también en forma de “Diccionario de datos” los campos que se mostraran en la consulta. 
@@ -288,10 +293,12 @@ Notar al inicio de la página que se especifica que solo se puede usar la inform
 El siguiente icono, símbolos mayor y menor, permite ver la guía de la consulta. 
 
  
-
+{% include inline_image.html
+file="MC_21.png" alt="" %}
  
 
- 
+ {% include inline_image.html
+file="MC_22.png" alt="" %}
 
  
 
@@ -302,7 +309,7 @@ El siguiente icono, símbolos mayor y menor, permite ver la guía de la consulta
 Al igual que en los conectores este formulario permite ver información asociada a la consulta. Y con esta información se puede dar manejo al API de las consultas. Esto lo veremos la próxima sección de este documento. Ver “Como se utilizan las APIs ...” a continuación. 
 
  
-
+ 
  
 
 ## **Como se utilizan las APIs y ejemplos de uso en Postman** 
@@ -330,13 +337,15 @@ Para obtener la información para el uso de las APIs tanto para consultas están
 Para el ejemplo usaremos la consulta API_v2_Terceros 
 
  
-
+{% include inline_image.html
+file="MC_23.png" alt="" %}
  
 
 Al presionar el icono “Ver Guía” aparece el siguiente formulario:  
 
  
-
+{% include inline_image.html
+file="MC_24.png" alt="" %}
  
 
 Este formulario tiene varios componentes útiles, los explicaremos a continuación. 
@@ -345,19 +354,20 @@ Tiene cuatro bandas de información.
 
 La primera banda contiene: 
 
-Type: (tipo) es GET ósea que es para obtener o consultar información.  
+**- Type**: (tipo) es GET ósea que es para obtener o consultar información.  
 
 La segunda banda contiene: 
 
-Base URL: permite seleccionar una opción 
+**- Base URL**: permite seleccionar una opción 
 
  
-
+{% include inline_image.html
+file="MC_25.png" alt="" %}
  
 
-Local: cuando el cliente tiene la plataforma Local y se instala el componente local, se menciona más adelante en este documento. 
+**Local**: cuando el cliente tiene la plataforma Local y se instala el componente local, se menciona más adelante en este documento. 
 
-QA: cuando está instalado en nube (también podría aparecer Core, en este caso es porque se está en ambiente QA) 
+**QA**: cuando está instalado en nube (también podría aparecer Core, en este caso es porque se está en ambiente QA) 
 
  
 
@@ -365,67 +375,74 @@ Al seleccionar una de las opciones se puede notar como cambia el dato en Request
 
  
 
-Request URL, se podría definir que este es el “Endpoint” a usar para el uso del API. Esta información se puede copiar para llevarla directamente al Postman usando el enlace (Copiar URL) 
+**- Request URL**, se podría definir que este es el “Endpoint” a usar para el uso del API. Esta información se puede copiar para llevarla directamente al Postman usando el enlace (Copiar URL) 
 
 La tercera banda contiene: 
 
 Los Headers o encabezados para la petición que se hará, estas son las llaves de seguridad asignados a cada cliente 
 
-- Connikey 
+- **Connikey** 
 
-- Connitoken 
+- **Connitoken** 
 
 Frente a cada uno se presenta un enlace para copiar el contenido en cada caso (Copiar) 
 
 La cuarta banda contiene: 
 
-Los Params o parámetros que se usan en la petición 
+Los **Params** o parámetros que se usan en la petición 
 
-idCompania: 7501 
-   	descripcion: API_v2_Terceros 
-   	paginacion: numPag=1|tamPag=100 
-   	parametros: {parametros} 
+**idCompania**: 7501
 
- 
+**descripcion**: API_v2_Terceros
 
-Significado de cada parámetro: (se omiten tildes en algunas palabras para ser congruentes con lo que se presenta en el formulario) 
+**paginacion**: numPag=1\|tamPag=100
 
- 
+**parametros**: {parametros} 
 
-Idcompañia : Código asignado al cliente en el Sistema 
 
-descripcion: Descripción de la consulta a usar 
 
-paginacion:  Definición de que página se consultara y tamaño de los registros por página. (esto es obligatorio en las consultas) 
-
-parametros:  Datos adicionales para filtrar la información de la consulta usando los campos. 
+**Significado de cada parámetro**: (se omiten tildes en algunas palabras para ser congruentes con lo que se presenta en el formulario) 
 
  
 
+**Idcompañia**: Código asignado al cliente en el Sistema 
+
+**descripcion**: Descripción de la consulta a usar 
+
+**paginacion**:  Definición de que página se consultara y tamaño de los registros por página. (esto es obligatorio en las consultas) 
+
+**parametros**:  Datos adicionales para filtrar la información de la consulta usando los campos. 
+
  
 
-**Uso en Postman** 
+ 
+
+### **Uso en Postman** ###
 
 En una colección creada en postman, para este caso Test_documentacion, se crea una nueva petición. (Add request) 
 
  
-
+{% include inline_image.html
+file="MC_26.png" alt="" %}
  
 
 En Postman nos aparece un “New Request” como en la siguiente imagen, nos debemos ubicar donde dice “Enter URL o Paste text” (se resalta en amarillo) aquí es donde se copiará la información que se obtiene de la Guía” también es conocido como el “EndPoint”. 
 
- 
+ {% include inline_image.html
+file="MC_27.png" alt="" %}
 
 En la Guía vamos a Copiar URL después de haber seleccionado la Base URL 
 
  
-
+{% include inline_image.html
+file="MC_28.png" alt="" %}
  
 
 Después de presionar el botón Copiar URL nos ubicamos de nuevo en Postman y pegamos la información obtenida, quedando lo siguiente en Postman: 
 
  
-
+{% include inline_image.html
+file="MC_29.png" alt="" %}
  
 
 Notar que se crean todos los “Query Params” que se traen en la URL, pero faltaría agregar los Headers, en Postman nos ubicamos en la pestaña Headers y creamos las dos variables para Connikey y Connitoken y los valores para estos los obtenemos de la Guía, copiando cada valor.  
@@ -436,14 +453,16 @@ Imagen parcial de la Guía copiando la información de Connikey y Connitoken
 
  
 
- 
+ {% include inline_image.html
+file="MC_30.png" alt="" %}
 
  
 
 Quedando lo siguiente en Postman después de la copia de cada llave: 
 
  
-
+{% include inline_image.html
+file="MC_31.png" alt="" %}
  
 
 Notar que se crearon dos variables en la columna Key y al frente la columna Value que ya tiene los valores obtenidos en la copia en la Guía y se muestran en forma parcial.  
@@ -454,23 +473,31 @@ Con esto ya se podría probar el “Endpoint”. Presionando el botón “Send�
 
  
 
-Revisar la próxima imagen, después de dar “Send” se puede notar que se realizó la consulta en forma satisfactoria. Donde se obtienen los datos de la consulta. Despues de presionar el Botón “Send” muestra el mensaje “Transacción exitosa”, y debajo trae el “detalle” significa que todo está correcto y devolvió la información de la consulta en el objeto “Table”. 
+Revisar la próxima imagen, después de dar “Send” se puede notar que se realizó la consulta en forma satisfactoria. Donde se obtienen los datos de la consulta. 
+
+
+{% include inline_image.html
+file="MC_32.png" alt="" %}
+
+Despues de presionar el Botón “Send” muestra el mensaje “Transacción exitosa”, y debajo trae el “detalle” significa que todo está correcto y devolvió la información de la consulta en el objeto “Table”. 
 
  
 
 En este punto ya se puede guardar la petición en Postman en la respectiva colección.  Para nuestro caso renombramos donde dice New Request, en la parte superior por Terceros y en la colección ya nos queda un EndPoint de Terceros en los Get. 
 
- 
 
+ 
+{% include inline_image.html
+file="MC_33.png" alt="" %}
  
 
 En el uso de las consultas, la paginación es obligatoria. 
 
 Para paginación usar lo siguiente: 
 
-numPag=1|tamPag=100 
+numPag=1\|tamPag=100 
 
- 
+ --- Seguir aqui con las imagenes
 
 Para incluir filtros en la consulta se usa el parámetro llamado (parametros), para filtrar se usa la columna campo, ver sección Consultas antes en este documento.  
 
