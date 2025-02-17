@@ -497,8 +497,7 @@ Para paginación usar lo siguiente:
 
 numPag=1\|tamPag=100 
 
- --- Seguir aqui con las imagenes
-
+ 
 Para incluir filtros en la consulta se usa el parámetro llamado (**parametros**), para filtrar se usa la columna **campo**, ver sección Consultas antes en este documento.  
 
 Los filtros funcionan en forma similar cómo funciona la cláusula Where en SQL, donde se puede filtrar por un solo campo o por varios campos usando operadores relacionales entre ellos. 
