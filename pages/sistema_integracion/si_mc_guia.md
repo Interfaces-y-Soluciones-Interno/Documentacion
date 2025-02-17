@@ -499,7 +499,7 @@ numPag=1\|tamPag=100
 
  --- Seguir aqui con las imagenes
 
-Para incluir filtros en la consulta se usa el parámetro llamado (parametros), para filtrar se usa la columna campo, ver sección Consultas antes en este documento.  
+Para incluir filtros en la consulta se usa el parámetro llamado (**parametros**), para filtrar se usa la columna **campo**, ver sección Consultas antes en este documento.  
 
 Los filtros funcionan en forma similar cómo funciona la cláusula Where en SQL, donde se puede filtrar por un solo campo o por varios campos usando operadores relacionales entre ellos. 
 
@@ -534,7 +534,8 @@ OR
 Ejemplo de Filtro usando dos comillas simples al principio y al final del contenido del filtro 
 
  
-
+{% include inline_image.html
+file="MC_34.png" alt="" %}
  
 
 Aquí se puso como filtro en parametros el valor f200_nit =''1144182829'' (ojo no es comilla doble, sino dos comillas sencillas en cada lado para el filtro de texto) 
@@ -545,14 +546,18 @@ Un ejemplo de filtro combinando dos campos en forma relacional.
 
  
 
- 
+  
+{% include inline_image.html
+file="MC_35.png" alt="" %}
 
  
 
 Aquí se relacionaron dos campos uno texto y el otro numérico, notar que la consulta devuelve los datos cumpliendo con el filtro incluido. 
 
  
-
+ 
+{% include inline_image.html
+file="MC_36.png" alt="" %}
  
 
  
@@ -565,7 +570,8 @@ El sistema tiene control de errores cuando hay algo que no se ha manejado bien y
 
  
 
- 
+ {% include inline_image.html
+file="MC_37.png" alt="" %}
 
  
 
@@ -580,12 +586,15 @@ En este ejemplo se usó dos puntos en vez del signo igual en el filtro por indic
 Para esto usaremos el conector API_v1_Terceros 
 
  
+ {% include inline_image.html
+file="MC_38.png" alt="" %}
 
  
 
 Al presionar el icono de “Ver Guía” similar como en las consultas, nos presenta el siguiente formulario, dividido también en cuatro bandas. 
 
- 
+ {% include inline_image.html
+file="MC_39.png" alt="" %}
 
 Las dos primeras bandas son similares a las de la consulta, con la diferencia en el Type (tipo) del API aquí es POST, con esto indica que es para llevar información hacia el ERP, recordar que con los conectores se permite importar información el ERP de Siesa, lo demás es igual que en la sección anterior. (ver la sección anterior, la explicación de estas dos bandas) 
 
@@ -593,9 +602,11 @@ Las dos primeras bandas son similares a las de la consulta, con la diferencia en
 
 La banda tres contiene los “Params” que en este caso son: 
 
-idCompania: 7501  
-idDocumento: 150484 
-nombreDocumento: API_v1_Terceros 
+**idCompania**: 7501  
+
+**idDocumento**: 150484 
+
+**nombreDocumento**: API_v1_Terceros 
 
  
 
@@ -603,14 +614,15 @@ Significado:
 
  
 
-idCompania: identificador de la compañía al interior del sistema  
-idDocumento: número interno del documento en el sistema 
+**idCompania**: identificador de la compañía al interior del sistema
 
-nombreDocumento: Descripción del conector en el sistema 
+**idDocumento**: número interno del documento en el sistema 
+
+**nombreDocumento**: Descripción del conector en el sistema 
 
  
 
-Y la banda cuatro de la guía contiene el “Body”, este es un ejemplo de la estructura del conector a usar en formato Json y sin datos, pero como ejemplo completo de cómo se debe usar el conector. Si damos copiar Body, nos copia algo como lo siguiente en este caso: 
+Y la banda cuatro de la guía contiene el “Body”, este es un ejemplo de la estructura del conector a usar en formato Json y sin datos, pero como ejemplo completo de cómo se debe usar el conector. Si damos ***copiar Body***, nos copia algo como lo siguiente en este caso: 
 
 
 ``` json
@@ -668,14 +680,16 @@ Y la banda cuatro de la guía contiene el “Body”, este es un ejemplo de la e
 ```
 
 
-Se puede notar que es la estructura “vacía” en formato Json del conector y de cómo debe enviarse el “body”  luego en la petición. Veamos el ejemplo del “consumo” del API en Postman. Creamos una nueva petición (Add request) en Postman, procurando que sea POST, luego nos ubicamos en la Guía del Gestor y seleccionamos la Base URL y Copiar URL 
+Se puede notar que es la estructura “vacía” en formato Json del conector y de cómo debe enviarse el “body”  luego en la petición. Veamos el ejemplo del “consumo” del API en Postman. Creamos una nueva petición (Add request) en Postman, procurando que sea POST, luego nos ubicamos en la Guía del Gestor y seleccionamos la Base URL y **Copiar URL** 
 
- 
+ {% include inline_image.html
+file="MC_40.png" alt="" %}
 
 Vamos a Postman y copiamos la información donde corresponde 
 
  
-
+{% include inline_image.html
+file="MC_41.png" alt="" %}
  
 
 Notar que es un “New Request”, tipo POST, y al pegar el “EndPoint” que se copió desde la guía, automáticamente se crean los “Query params” IdCompania, IdDocumento y nombreDocumento. La configuración del API aún no está completa. 
@@ -683,7 +697,8 @@ Notar que es un “New Request”, tipo POST, y al pegar el “EndPoint” que s
 Luego ubicados en Postman se deben crear los Headers para Connikey y Connitoken y se copia la información de valor para cada uno desde la Guía, como se realizó en la sección anterior debe quedar algo como lo siguiente: 
 
  
-
+{% include inline_image.html
+file="MC_42.png" alt="" %}
  
 
  
@@ -751,12 +766,14 @@ Luego se debe llenar la estructura copiada del body con los datos que se llevara
 Al copiar en Postman el Json anterior en la sección Body 
 
  
-
+{% include inline_image.html
+file="MC_43.png" alt="" %}
  
 
 Con todo esto ya se puede realizar el “consumo”. Se presiona el Botón “Send” y si todo está bien la transacción debe ser exitosa. 
 
- 
+ {% include inline_image.html
+file="MC_44.png" alt="" %}
 
 Al presionar el botón ”Send” se ejecuta el API, y en la imagen se puede notar que la importación fue exitosa, esto significa que el conector funciono bien y la información fue importada al ERP de Siesa en forma exitosa.  
 
@@ -769,7 +786,8 @@ Al presionar el botón ”Send” se ejecuta el API, y en la imagen se puede not
 El sistema tiene control de errores cuando hay algo que no se ha manejado bien y muestra mensajes alusivos a lo que pudo pasar, veamos un ejemplo, en el conector anterior no se pasa el dato de la compañía en la sección inicial del conector, el sistema mostrara un error como sigue: 
 
  
-
+{% include inline_image.html
+file="MC_45.png" alt="" %}
  
 
 Básicamente muestra el detalle del error como lo mostraría en ERP de Siesa 
@@ -803,39 +821,7 @@ Las APIs de consultas y conectores estándar funcionan en la misma forma que se 
 ## **Glosario de términos informáticos** 
 
  
-
-Termino 
-
-Definición 
-
-API 
-
-(del inglés, application programming interface, en español, interfaz de programación de aplicaciones) es una pieza de código que permite a dos aplicaciones comunicarse entre sí para compartir información y funcionalidades. (tomado de Wikipedia) 
-
-URL 
-
-Localizador Uniforme de Recurso, dícese de la dirección de una página Web de Internet. 
-
-Enlace 
-
-Conexión de un documento de Internet con otro que figura resaltado de manera especial, también llamado Hipervínculo o Hiperenlace. 
-
-Link 
-
-Cada uno de los enlaces de un módulo con las librerías que utiliza. En Internet, conexión de un documento con otro mediante un clic sobre un texto marcado o un icono o imagen. 
-
-Endpoint 
-
-Un endpoint es una dirección de una API, que se encarga de dar respuesta a una petición. En una API, es una interfaz que sirve para la conexión de varios sistemas. Se basa en HTTP y sirve para obtener y enviar datos e información. 
-
-Dirección IP 
-
-Cadena numérica que identifica a una máquina en una red IP. 
-
-
-
-  
-
-  
+{% include inline_image.html
+file="MC_46.png" alt="" %}
 
 
