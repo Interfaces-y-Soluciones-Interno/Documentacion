@@ -814,7 +814,11 @@ Cuando se instala el componente local, se instala un manejador de las APIs en Fo
 Las APIs de consultas y conectores estándar funcionan en la misma forma que se explicó antes en este documento, la única diferencia es que en el EndPoint es necesario actualizar la ruta por una ruta local del servidor donde haya quedado instalado el componente local. 
 
  
+## **Descargar la Guía** ##
 
+Puede descargar la Guía en PDF en el siguiente enlace:
+
+<a target="_blank" class="noCrossRef" href="{{ "pdf/Guia_Modulo_de_Conectividad_Cliente_ConnektaV2_v2.pdf"}}"> PDF Download
  
 
 ## **Glosario de términos informáticos** 

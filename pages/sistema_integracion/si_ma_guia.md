@@ -248,9 +248,18 @@ file="MA_27.png" alt="" %}
 
 Para dar un permiso sobre una restricción, se debe desplegar la caja de selección y marcar la caja de chequeo de la restricción que se desee asignar. Si se desea seleccionar todas las restricciones basta marcar la caja de chequeo que aparece frente a la lupa. En el caso de la imagen, las marcadas en azul están asignadas al usuario seleccionado. 
 
+## **Descargar la Guía** ##
+
+Puede descargar la Guía en PDF en el siguiente enlace:
+
+<a target="_blank" class="noCrossRef" href="{{ "pdf/Guia_Gestion_usuarios_y_permisos_Sistema_Integrador.pdf"}}"> PDF Download
+
+
 ## **Glosario de términos informáticos** ##
 
 
 
 {% include inline_image.html
 file="MA_28.png" alt="" %}
+
+
