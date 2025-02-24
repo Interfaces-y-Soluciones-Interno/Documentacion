@@ -20,4 +20,4 @@ Las API que hacen referencia a las consultas dinámicas, tiene tres apartes; la 
 
 Al revisar la documentacion en la página, si encuentra un simbolo mas "+" puede dar clic sobre el para ampliar la información y luego aparece el simbolo menos"-". Y en caso de que no quiera ver la información que abrio puede presionar el simbolo menos.
 
-Para ver la documentación seleccione la opción APIs V2 en el menú de la parte izquierda.
+Para ver la documentación seleccione la opción Connekta APIs V2 en el menú de la parte izquierda.
