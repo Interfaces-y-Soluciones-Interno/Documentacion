@@ -20,9 +20,9 @@ entries:
     #- title: Generic Transfer
      # url: /gt_landing_page.html
       # output: web 
-    - title: Siesa Expenses
-      url: /se_landing_page.html
-      output: web 
+    #- title: Siesa Expenses
+      #url: /se_landing_page.html
+      #output: web 
     #- title: APIs V2
       #url: /APIs_V2.html 
       #output: web  

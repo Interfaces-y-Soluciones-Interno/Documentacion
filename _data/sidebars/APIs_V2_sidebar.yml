@@ -23,14 +23,15 @@ entries:
 
   - title: Empezando #Getting Started
     output: web, pdf
-    folderitems:
+    folderitems:    
     - title: Connekta APIs V2
       url: /APIs_V2.html
       output: web
-
     - title: Acerca de
       url: /apis_v2_acerca_de.html
       output: web, pdf
+
+    
     #- title: Guía Módulo Conectividad
       #url: /si_mc_guia.html
       #output: web, pdf
