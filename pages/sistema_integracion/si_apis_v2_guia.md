@@ -86,10 +86,11 @@ También se pueden ejecutar procedimientos almacenados o mandar a llamar a varia
 
 **Uso**:
 
-• Uso Simple, una solo consulta
+• Uso Simple, una solo consulta (*)
 
 {% include inline_image.html
 file="API_V2_0003.png" alt="" %}
+    (*Configuración de la Consulta en el sistema de integración)
  
 • Uso de varias consultas al tiempo
 
