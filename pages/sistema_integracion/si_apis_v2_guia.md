@@ -1,7 +1,7 @@
 ---
-title: Connekta - APIs V2
+title: Connekta - APIs Versión dos
 keywords: 
-last_updated: Febrero 27, 2025
+last_updated: Febrero 28, 2025
 tags: #[getting_started]
 #summary: "Inicio APIs Version 2"
 sidebar: sistema_integracion_sidebar
@@ -143,9 +143,9 @@ file="API_V2_0009.png" alt="" %}
 {% include inline_image.html
 file="API_V2_0010.png" alt="" %}
 
-    Connekta-Rate-Limit-Limit | Limite de peticiones por minuto 
+    Connekta-Rate-Limit-Limit     | Limite de peticiones por minuto 
     Connekta-Rate-Limit-Remaining | Peticiones faltantes en el minuto actual
-    Connekta-Rate-Limit-Reset | Tiempo en que se reinicia el limit 
+    Connekta-Rate-Limit-Reset     | Tiempo en que se reinicia el limit 
     Connekta-Cache-Time-Remaining | tiempo en cache de la informacion antes de expirar.
 
 
@@ -383,6 +383,21 @@ La respuesta en esta API desde la pagina dos debe mejorar mucho el desempeño.
 
 **Uso**:
 
+{% include inline_image.html
+file="API_V2_0025.png" alt="" %}
+
+Se construye la consulta dinamica en el Sistema de integración Connekta
+
+{% include inline_image.html
+file="API_V2_0026.png" alt="" %}
+
+en parámetros Obliga paginación
+
+{% include inline_image.html
+file="API_V2_0027.png" alt="" %}
+
+Se pueden hacer peticiones de hasta 10.000 registros por pagina, ya que desde la página dos el llamado se hace desde cache.
+
 #### V4.1 Ejecutar Consulta Dinamica
 
 **Request URL**
@@ -447,6 +462,16 @@ Todas las APIs que manejan Cache la paginación es obligatoria.
 
 **Uso**:
 
+{% include inline_image.html
+file="API_V2_0028.png" alt="" %}
+
+Notar que tiene formato generico del Json en la respuesta. 
+
+Paginación requerida.
+
+Almacenamiento en Cache.
+
+Buen desempeño desde la página dos.
 
 #### V5 Ejecutar Consulta Dinamica
 
@@ -505,7 +530,7 @@ Con esta API, se puede escalar la información hacia sistemas externos que neces
 #### V3.1 Gestionar Log
 -->
 
-### **Parametros**
+### **Parámetros**
 
 #### V3 Parametros Por Sistema
 
