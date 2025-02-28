@@ -258,16 +258,16 @@ BEGIN
 			IF @f_filters = ''
 				BEGIN
                 SET @query = @sql	+ ' ORDER BY ' + @paramOrderPag
-                            + ' OFFSET ' + CONVERT(NVARCHAR(MAX),@skipReg) + ' ROWS'
-                            + ' FETCH NEXT ' + CONVERT(NVARCHAR(MAX),@tamPag) +' ROWS ONLY'
+                                    + ' OFFSET ' + CONVERT(NVARCHAR(MAX),@skipReg) + ' ROWS'
+                                    + ' FETCH NEXT ' + CONVERT(NVARCHAR(MAX),@tamPag) +' ROWS ONLY'
                 EXEC sp_executesql @query
 				END
 			ELSE
 				BEGIN
                 SET @query = @sql	+ ' WHERE ' + CONVERT(NVARCHAR(MAX),@f_filters)
-                            + ' ORDER BY ' + @paramOrderPag
-                            + ' OFFSET ' + CONVERT(NVARCHAR(MAX),@skipReg) + ' ROWS'
-                            + ' FETCH NEXT ' + CONVERT(NVARCHAR(MAX),@tamPag) +' ROWS ONLY'
+                                    + ' ORDER BY ' + @paramOrderPag
+                                    + ' OFFSET ' + CONVERT(NVARCHAR(MAX),@skipReg) + ' ROWS'
+                                    + ' FETCH NEXT ' + CONVERT(NVARCHAR(MAX),@tamPag) +' ROWS ONLY'
                 EXEC sp_executesql @query
 				END
 			END	 					
@@ -489,16 +489,47 @@ Todas las APIs anteriores de la Version V3 hasta la versión V4.1.1, tienen la c
 Para este caso si todo lo anterior no aplica, se debe validar esta API, aqui el sistema se "abre" un poco para permitir el manejo del "body", y se deja la responsabilidad en el interesado que este ejecutando la acción.
 
 En el Body debe llegar una peticion de consulta "QrySql" el cual debe contener un query String encriptado de la consulta que se quiere realizar, esta codificación o encriptacion se debe realizar con una herramienta que le debemos proveer al cliente para que lo genere.
-(Poner alusion a imagen del programa que se debe entregar minuto, Ver imagen ...) 
+(Ver imagen en el aparte de Uso del programa que Codifica/Decodifica ** ) 
 
 Aplica en Sistemas que son muy interactivos, son querys que se arman dinamicamente en un momento dado y no se sabe hasta ese momento como seria la consulta.
 Esta API, se debe asociar a un sistema especifico en Connekta, este sistema especifico, manejara su propia conexion, a la base de datos que se desee. 
 
-Lo que hace el API es tomar la consulta que viene encriptada, internamente la desencripta, y toma la conexion del sistema al que se asocio, y retorna la información solicitada en la consulta en el JSON de respuesta, (ver ejemplo imagen...) 
+Lo que hace el API es tomar la consulta que viene encriptada, internamente la desencripta, y toma la conexion del sistema al que se asocio, y retorna la información solicitada en la consulta en el JSON de respuesta, (ver imagen ejemplo en el aparte de Uso ***) 
 
 En el Body "QrySql" se carga la informacion dependiendo de las reglas de negocio que maneje en el cliente especifico. Funciona en clientes muy dinamicos.
 
 **Uso**:
+
+{% include inline_image.html
+file="API_V2_0030.png" alt="" %}
+
+Ver el dato que se envia en el Body del API.
+
+{% include inline_image.html
+file="API_V2_0031.png" alt="" %}
+
+QrySql es igual al dato encriptado de la consulta que se envia en el API V5 de tipo POST
+
+{% include inline_image.html
+file="API_V2_0029.png" alt="" %}
+
+** Programa que Codifica / Decodifica el "QrySql". Se entrega al cliente - Tercero
+Ver que el dato que se envia encriptado, equivale a una consulta de SQL.
+
+{% include inline_image.html
+file="API_V2_0032.png" alt="" %}
+
+En la imagen anterior, se puede notar que la consulta esta enlazada con un sistema, el sistema identificado con 13, en este caso
+
+{% include inline_image.html
+file="API_V2_0033.png" alt="" %}
+
+En Connekta se puede notar el sistema 13, el que se asocia con una conexion de base de datos "ConnektaQA" y a esa conexion es de donde se obtendrán los datos de la consulta que se ejecutara. (***)
+
+{% include inline_image.html
+file="API_V2_0034.png" alt="" %}
+
+Al ejecutar la API V5, y si todo esta correcto, se retorna la información consultada en el sistema específico.
 
 
 ### **Interfaces**
@@ -515,12 +546,36 @@ En el Body "QrySql" se carga la informacion dependiendo de las reglas de negocio
 Es una API utilizada para los sistemas que se están desarrollando internamente, y está estrechamente relacionada con lo que denominamos "propiedades offline".
 El objetivo es eliminar todas las dependencias de lo que existe en Connekta, trasladando toda la información a un archivo encriptado localmente, desde el cual se pueda acceder y realizar ciertas operaciones.
 
-Esta API vincula visualmente lo que se ve en Connekta como un sistema y obtiene todas las interfaces generadas para dicho sistema. Un ejemplo gráfico de esto se puede ver en la imagen adjunta. Cada interfaz puede tener consultas (queries) asociadas, y a través de esta API es posible obtener toda la información de las interfaces, junto con sus queries. Un ejemplo gráfico de esto también se muestra en la imagen.
+Esta API vincula visualmente lo que se ve en Connekta como un sistema y obtiene todas las interfaces generadas para dicho sistema. Un ejemplo gráfico de esto se puede ver en las imagenes que se añaden en el aparte de Uso. Cada interfaz puede tener consultas (queries) asociadas, y a través de esta API es posible obtener toda la información de las interfaces, junto con sus queries. Un ejemplo gráfico de esto también se muestra en las imagenes del aparte de Uso.
 
 Con esta API, se puede escalar la información hacia sistemas externos que necesiten centralizarla dentro de Connekta. Este es solo uno de los componentes del mecanismo offline, y proporciona acceso a la información del sistema en sí, las interfaces asociadas y, dentro de ellas, los queries que maneja un sistema determinado en Connekta.
 
 
 **Uso**:
+
+{% include inline_image.html
+file="API_V2_0035.png" alt="" %}
+
+En la imagen notar las interfaces del sistema Shopify en implementación.
+
+{% include inline_image.html
+file="API_V2_0036.png" alt="" %}
+
+Cada interface a su vez puede tener Queries, como en este caso la interface Shopify_Descargar_Productos, tiene estos tres Queries
+
+{% include inline_image.html
+file="API_V2_0038.png" alt="" %}
+
+Al ejecutar el API, esta trae toda la información relacionada a la Interfaces, es decir, interfaces y todos sus queries.
+
+Al copiar la respuesta en json y llevarla a una herramienta grafica para mejor comprensión, podemos ver lo que nos retorna.
+
+{% include inline_image.html
+file="API_V2_0039.png" alt="" %}
+
+Ver el recuadro amarillo la información que devuelve el API V5, Esta información luego es almacenada para su uso "Offline"
+
+Esta API se relaciona mucho con el API "V3 Parametros Por Sistema". Revisar en este documento.
 
 <!--
 ### **Logs**
