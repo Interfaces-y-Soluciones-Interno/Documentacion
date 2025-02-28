@@ -18,7 +18,7 @@ Postman: es una herramienta utilizada para probar APIs, permitiendo a los desarr
 
 Las API que hacen referencia a las consultas dinámicas, tiene tres apartes; la URL Request donde se muestra el tipo de la petición que es, Ej. GET, y se pone un ejemplo del Endpoint o URL, una nota donde se describen algunos aspectos del microservicio y el uso donde se muestran los ejemplos de como utilizar el microservicio.
 
-Este documento se organizo como esta definida la Colección en Postman que elaboro el Equipo Connekta, los diferentes microservicios se iran añadiendo a este documento hasta completarlos.
+Este documento se organizo como esta definida la Colección en Postman que elaboro el Equipo Connekta, los diferentes microservicios se irán añadiendo a este documento hasta completarlos.
 
 
 ## **CONNEKTA**
@@ -197,8 +197,93 @@ Siempre se debe construir las consultas de la siguiente forma:
 {% include inline_image.html
 file="API_V2_0008.png" alt="" %}
 
+``` sql
+-- las consultas se deben construir de esta forma:
+DECLARE @numPag	INT = {numPag}
+DECLARE @tamPag	INT = {tamPag}
+DECLARE @paramOrderPag NVARCHAR(MAX) = 'f200_rowid'
+DECLARE @skipReg  INT = (@numPag-1) * @tamPag 
+DECLARE @pageLimitSize  INT = 100;
+DECLARE @f_filters NVARCHAR(MAX) = {Filters}
+DECLARE @query NVARCHAR(MAX) 
+DECLARE @sql NVARCHAR(MAX)
 
-    ◦ Variables Paginación
+BEGIN
+	TRY
+		IF @tamPag > @pageLimitSize
+		BEGIN
+			SELECT 'La cantidad de registros solicitados excede el permitido.' AS 'alerta'
+		END
+		ELSE
+		BEGIN
+			IF @numPag < 1
+				BEGIN
+					SELECT 'Sin registros.' AS 'alerta'
+				END
+			ELSE
+			BEGIN							
+				SET @sql = '
+				SELECT
+				*
+				FROM
+				(
+				SELECT
+				 t200.f200_id_cia
+				,t200.f200_rowid
+				,RTRIM(f200_id) AS f200_id
+				,RTRIM(f200_nit) AS f200_nit
+				,t200.f200_dv_nit
+				,t200.f200_id_tipo_ident
+				,t200.f200_ind_tipo_tercero
+				,RTRIM(t200.f200_razon_social) AS f200_razon_social
+				,RTRIM(t200.f200_apellido1) AS f200_apellido1
+				,RTRIM(t200.f200_apellido2) AS f200_apellido2
+				,RTRIM(t200.f200_nombres) AS f200_nombres
+				,t200.f200_ind_cliente
+				,t200.f200_ind_proveedor
+				,t200.f200_ind_empleado
+				,t200.f200_ind_accionista
+				,t200.f200_ind_otros
+				,t200.f200_ind_interno
+				,RTRIM(t200.f200_nombre_est) AS f200_nombre_est
+				,t200.f200_fecha_nacimiento
+				,t200.f200_id_ciiu
+				,t200.f200_ind_estado
+				,t200.f200_ind_no_domiciliado
+				,t200.f200_ts
+				FROM t200_mm_terceros t200
+				) AS Tabla
+				'
+			IF @f_filters = ''
+				BEGIN
+                SET @query = @sql	+ ' ORDER BY ' + @paramOrderPag
+                            + ' OFFSET ' + CONVERT(NVARCHAR(MAX),@skipReg) + ' ROWS'
+                            + ' FETCH NEXT ' + CONVERT(NVARCHAR(MAX),@tamPag) +' ROWS ONLY'
+                EXEC sp_executesql @query
+				END
+			ELSE
+				BEGIN
+                SET @query = @sql	+ ' WHERE ' + CONVERT(NVARCHAR(MAX),@f_filters)
+                            + ' ORDER BY ' + @paramOrderPag
+                            + ' OFFSET ' + CONVERT(NVARCHAR(MAX),@skipReg) + ' ROWS'
+                            + ' FETCH NEXT ' + CONVERT(NVARCHAR(MAX),@tamPag) +' ROWS ONLY'
+                EXEC sp_executesql @query
+				END
+			END	 					
+	END 
+END
+	TRY  
+BEGIN 
+	CATCH
+		SELECT 'Por favor verifique los filtros enviados.' AS 'alerta'
+END CATCH
+---
+```
+
+
+
+
+    ◦ Variables de Paginación
     DECLARE @numPag INT = {numPag} 
     DECLARE @tamPag INT = {tamPag} 
     DECLARE @paramOrderPag NVARCHAR(MAX) = 'f200_rowid' 
