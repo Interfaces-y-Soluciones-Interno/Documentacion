@@ -629,7 +629,7 @@ Al ver la información que nos devuelve el API podemos notar la informacion de l
 
 Se puede incluir un filtro en el parámetro "descripcionParametro". En el ejemplo no se uso.
 
-Tambien se devuelven los parámetros de Ecosistema.
+Tambien se devuelven los parámetros del Ecosistema donde este el sistema.
 
 {% include inline_image.html
 file="API_V2_0044.png" alt="" %}
