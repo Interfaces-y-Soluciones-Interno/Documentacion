@@ -597,12 +597,46 @@ Esta API se relaciona mucho con el API "V3 Parametros Por Sistema". Revisar en e
 **Notas**:
 
 Esta API está estrechamente relacionada con la API "V3 Interfaces Queries por Sistema", ya que permite obtener la información de un sistema en modo "offline".
-Es similar a la API anterior, pero en este caso se recuperan los parámetros y conexiones configuradas en el sistema (ver imagen), así como los parámetros del Ecosistema asociado. 
+
+Esta API es similar a la API anterior "V3 Interfaces Queries por Sistema", pero en este caso se recuperan los parámetros y conexiones configuradas en el sistema (ver imagenes en aparte Uso).
 
 Con esta API, junto con la "V3 Interfaces Queries por Sistema", se obtiene toda la información disponible en Connekta sobre un sistema, y se maneja en modo "offline", lo que permite reducir la cantidad de llamadas a Connekta. Este enfoque facilita la reutilización dentro de un sistema propio y se denomina desacoplamiento de la dependencia de los satélites.
 
 
 **Uso**:
+
+{% include inline_image.html
+file="API_V2_0040.png" alt="" %}
+
+En esta API lo que se trae en la consulta es todo lo que tiene que ver con las Conexiones y lo que tiene que ver con los parametros del sistema específico.
+
+Conexiones:
+
+{% include inline_image.html
+file="API_V2_0041.png" alt="" %}
+
+Parámetros
+
+{% include inline_image.html
+file="API_V2_0042.png" alt="" %}
+
+Al ejecutar el API, se obtiene la información en un archivo json, la cual copiamos y la pegamos en la siguiente herramienta gráfica.
+
+{% include inline_image.html
+file="API_V2_0043.png" alt="" %}
+
+Al ver la información que nos devuelve el API podemos notar la informacion de las conexiones y de los parámetros del sistema, en una herramienta gráfica en este caso, ver recuadro amarillo en la imagen anterior.
+
+Se puede incluir un filtro en el parámetro "descripcionParametro". En el ejemplo no se uso.
+
+Tambien se devuelven los parámetros de Ecosistema.
+
+{% include inline_image.html
+file="API_V2_0044.png" alt="" %}
+
+Con esta API "V3 Parametros Por Sistema" y la API "V3 Interfaces Queries por Sistema" Connekta nos retorna toda la generalidad dentro de un sistema. 
+Información de las Interfaces y sus queries asociados, parámetros asociados tanto del sistema como del Ecosistema y las conexiones que se tengan seleccionadas para un sistema específico. 
+Y al poder usar toda esta información dentro de un sistema propio y si se usa la estrategia "offline" se haran menos llamados al sistema de integración Connekta.
 
 <!--
 
