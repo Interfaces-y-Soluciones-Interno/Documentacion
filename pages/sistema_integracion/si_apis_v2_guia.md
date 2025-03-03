@@ -1,7 +1,7 @@
 ---
 title: Connekta - APIs Versión dos
 keywords: 
-last_updated: Febrero 28, 2025
+last_updated: Marzo 3, 2025
 tags: #[getting_started]
 #summary: "Inicio APIs Version 2"
 sidebar: sistema_integracion_sidebar
