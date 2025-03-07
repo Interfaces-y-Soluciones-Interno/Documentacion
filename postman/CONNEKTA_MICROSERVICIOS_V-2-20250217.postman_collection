@@ -1,0 +1,1801 @@
+{
+	"info": {
+		"_postman_id": "32d603a3-10e5-4f44-a008-88160f6578ab",
+		"name": "CONNEKTA MICROSERVICIOS V-2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5125590"
+	},
+	"item": [
+		{
+			"name": "CONNEKTA",
+			"item": [
+				{
+					"name": "CONSULTAS DINAMICAS",
+					"item": [
+						{
+							"name": "V3 Consultas Dinamicas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_qa}}/api/connekta/v3/consultasporcompania?idCompania={{idCompania}}",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"connekta",
+										"v3",
+										"consultasporcompania"
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "V3 Ejecutar Consulta Dinamica",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_qa}}/api/connekta/v3/ejecutarconsulta?idCompania={{idCompania}}&descripcion=interfacesysoluciones_terceros",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"connekta",
+										"v3",
+										"ejecutarconsulta"
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										},
+										{
+											"key": "descripcion",
+											"value": "interfacesysoluciones_terceros"
+										},
+										{
+											"key": "parametros",
+											"value": "Id=1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "V3.0.1 Ejecutar Consulta Dinamica",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_qa}}/api/connekta/v3.0.1/ejecutarconsulta?idCompania={{idCompania}}&descripcion=interfacesysoluciones_terceros&paginacion=numPag=1|tamPag=100",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"connekta",
+										"v3.0.1",
+										"ejecutarconsulta"
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										},
+										{
+											"key": "descripcion",
+											"value": "interfacesysoluciones_terceros"
+										},
+										{
+											"key": "paginacion",
+											"value": "numPag=1|tamPag=100"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "V3.1 Ejecutar Consulta Dinamica",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_qa}}/api/connekta/v3.1/ejecutarconsulta?idCompania={{idCompania}}&descripcion=Auxiliares&paginacion=numPag=1|tamPag=100&parametros=f253_descripcion=''Por Servicios del 4%''",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"connekta",
+										"v3.1",
+										"ejecutarconsulta"
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										},
+										{
+											"key": "descripcion",
+											"value": "Auxiliares"
+										},
+										{
+											"key": "paginacion",
+											"value": "numPag=1|tamPag=100"
+										},
+										{
+											"key": "parametros",
+											"value": "f253_descripcion=''Por Servicios del 4%''"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "V3.1 Ejecutar Consulta Dinamica Oracle",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_qa}}/api/connekta/v3.1/ejecutarconsultaoracle?idCompania={{idCompania}}&descripcion=Auxiliares&parametros=f253_descripcion=''Por Servicios del 4%''",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"connekta",
+										"v3.1",
+										"ejecutarconsultaoracle"
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										},
+										{
+											"key": "descripcion",
+											"value": "Auxiliares"
+										},
+										{
+											"key": "parametros",
+											"value": "f253_descripcion=''Por Servicios del 4%''"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "V4 Ejecutar Consulta Dinamica",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_qa}}/api/connekta/v4/ejecutarconsulta?idCompania={{idCompania}}&descripcion=interfacesysoluciones_items",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"connekta",
+										"v4",
+										"ejecutarconsulta"
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										},
+										{
+											"key": "descripcion",
+											"value": "interfacesysoluciones_items"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "V4.0.1 Ejecutar Consulta Dinamica Cache",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_qa}}/api/connekta/v4.0.1/ejecutarconsulta?idCompania={{idCompania}}&descripcion=interfacesysoluciones_items&paginacion=numPag=1|tamPag=100",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"connekta",
+										"v4.0.1",
+										"ejecutarconsulta"
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										},
+										{
+											"key": "descripcion",
+											"value": "interfacesysoluciones_items"
+										},
+										{
+											"key": "paginacion",
+											"value": "numPag=1|tamPag=100"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "V4.1 Ejecutar Consulta Dinamica",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_qa}}/api/connekta/v4.1/ejecutarconsulta?idCompania={{idCompania}}&descripcion=interfacesysoluciones_items",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"connekta",
+										"v4.1",
+										"ejecutarconsulta"
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										},
+										{
+											"key": "descripcion",
+											"value": "interfacesysoluciones_items"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "V4.1.1 Ejecutar Consulta Dinamica Cache",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_qa}}/api/connekta/v4.1.1/ejecutarconsulta?idCompania={{idCompania}}&descripcion=interfacesysoluciones_items&paginacion=numPag=1|tamPag=100",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"connekta",
+										"v4.1.1",
+										"ejecutarconsulta"
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										},
+										{
+											"key": "descripcion",
+											"value": "interfacesysoluciones_items"
+										},
+										{
+											"key": "paginacion",
+											"value": "numPag=1|tamPag=100"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "V5 Ejecutar Consulta Dinamica",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"QuerySql\": \"U0VMRUNUIHRvcCAxMCAnRW5jYWJlemFkbycgQVMgJ05vbWJyZVNlY2Npb24nLCAqIEZST00gTG9nU2VydmljaW9zRW5jYWJlemFkbyBTRUxFQ1QgdG9wIDIwICdEZXRhbGxlJyBBUyAnTm9tYnJlU2VjY2lvbicsKiBGUk9NIExvZ1NlcnZpY2lvc0RldGFsbGU=:b4f175f1ecae6e102e980642c94e5a04abf0d62e4ad4c46dae15b1cf35d08f3e\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url_qa}}/api/connekta/v5/ejecutarconsulta?idCompania={{idCompania}}&idSistema=13",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"connekta",
+										"v5",
+										"ejecutarconsulta"
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										},
+										{
+											"key": "idSistema",
+											"value": "13"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "INTERFACES",
+					"item": [
+						{
+							"name": "V3 Interfaces Queries Por Sistema",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_qa}}/api/connekta/v3/interfacesqueriesporsistema?idCompania={{idCompania}}&IdSistema=1",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"connekta",
+										"v3",
+										"interfacesqueriesporsistema"
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										},
+										{
+											"key": "IdSistema",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "LOGS",
+					"item": [
+						{
+							"name": "V3 Gestionar Log",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"idinterface\": 48,\r\n  \"error\": false,\r\n  \"transacciones\": [\r\n    {\r\n      \"descripcion\": \"transaccion_exitosa\",\r\n      \"fecha_inicio\": \"2024-06-11T23:13:59.749Z\",\r\n      \"fecha_fin\": \"2024-06-11T23:13:59.749Z\",\r\n      \"transaccion_exitosa\": true\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url_qa}}/api/connekta/v3/gestionarlog?idCompania={{idCompania}}",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"connekta",
+										"v3",
+										"gestionarlog"
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "V3.1 Gestionar Log",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"idinterface\": 190,\r\n  \"error\": true,\r\n  \"asuntoCorreo\": \"Asunto personalizado\",\r\n  \"descripcionCorreo\": \"Esto es un mensaje personalizado desde el JSON para esta notificacion\",\r\n  \"transacciones\": [\r\n    {\r\n      \"descripcion\": \"Esto es una transaccion que termino Exitosa 12\",\r\n      \"fecha_inicio\": \"2024-08-30T17:26:09.909Z\",\r\n      \"fecha_fin\": \"2024-08-30T17:26:09.909Z\",\r\n      \"transaccion_exitosa\": true\r\n    },\r\n    {\r\n      \"descripcion\": \"Esto es una transaccion que termino con Errores 23\",\r\n      \"fecha_inicio\": \"2024-08-30T17:26:09.909Z\",\r\n      \"fecha_fin\": \"2024-08-30T17:26:09.909Z\",\r\n      \"transaccion_exitosa\": false\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url_qa}}/api/connekta/v3.1/gestionarlog?idCompania={{idCompania}}",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"connekta",
+										"v3.1",
+										"gestionarlog"
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PARAMETROS",
+					"item": [
+						{
+							"name": "V3 Parametros Por Sistema",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_qa}}/api/connekta/v3/parametrosporsistema?idCompania={{idCompania}}&idSistema=5&descripcionParametro",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"connekta",
+										"v3",
+										"parametrosporsistema"
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										},
+										{
+											"key": "idSistema",
+											"value": "5"
+										},
+										{
+											"key": "descripcionParametro",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "V3 Parametros Por Compania",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_qa}}/api/connekta/v3/parametrosporcompania?idCompania={{idCompania}}",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"connekta",
+										"v3",
+										"parametrosporcompania"
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "TOKEN",
+					"item": [
+						{
+							"name": "V3 Generar Token",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "usuario",
+										"value": "{{usuario}}",
+										"type": "text"
+									},
+									{
+										"key": "contrasena",
+										"value": "{{contraseña}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_qa}}/api/connekta/v3/generartoken/?idCompania={{idCompania}}",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"connekta",
+										"v3",
+										"generartoken",
+										""
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "EQUIVALENCIAS",
+					"item": [
+						{
+							"name": "V3 Equivalencia por Sistema",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_qa}}/api/connekta/v3/equivalenciasporsistema?idCompania={{idCompania}}&idSistema=5",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"connekta",
+										"v3",
+										"equivalenciasporsistema"
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										},
+										{
+											"key": "idSistema",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "SIESA",
+			"item": [
+				{
+					"name": "ERP",
+					"item": [
+						{
+							"name": "MODULO CONECTIVIDAD",
+							"item": [
+								{
+									"name": "V3 Consultas Estandar",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "conniKey",
+												"value": "{{conniKey}}",
+												"type": "text"
+											},
+											{
+												"key": "conniToken",
+												"value": "{{conniToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url_qa}}/api/siesa/v3/consultasporcompaniaestandar?idCompania={{idCompania}}",
+											"host": [
+												"{{base_url_qa}}"
+											],
+											"path": [
+												"api",
+												"siesa",
+												"v3",
+												"consultasporcompaniaestandar"
+											],
+											"query": [
+												{
+													"key": "idCompania",
+													"value": "{{idCompania}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "V3 Ejecutar Consulta Estandar",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "conniKey",
+												"value": "{{conniKey}}",
+												"type": "text"
+											},
+											{
+												"key": "conniToken",
+												"value": "{{conniToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url_qa}}/api/siesa/v3/ejecutarconsultaestandar?idCompania={{idCompania}}&descripcion=API_v2_Companias&paginacion=numPag=1|tamPag=100",
+											"host": [
+												"{{base_url_qa}}"
+											],
+											"path": [
+												"api",
+												"siesa",
+												"v3",
+												"ejecutarconsultaestandar"
+											],
+											"query": [
+												{
+													"key": "idCompania",
+													"value": "{{idCompania}}"
+												},
+												{
+													"key": "descripcion",
+													"value": "API_v2_Companias"
+												},
+												{
+													"key": "paginacion",
+													"value": "numPag=1|tamPag=100"
+												},
+												{
+													"key": "parametros",
+													"value": "f253_rowid=3",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "V3 Conectores Estandar",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "conniKey",
+												"value": "{{conniKey}}",
+												"type": "text"
+											},
+											{
+												"key": "conniToken",
+												"value": "{{conniToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url_qa}}/api/siesa/v3/conectoresporcompaniaestandar?idCompania={{idCompania}}",
+											"host": [
+												"{{base_url_qa}}"
+											],
+											"path": [
+												"api",
+												"siesa",
+												"v3",
+												"conectoresporcompaniaestandar"
+											],
+											"query": [
+												{
+													"key": "idCompania",
+													"value": "{{idCompania}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "V3 Conectores Estructura Estandar",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "conniKey",
+												"value": "{{conniKey}}",
+												"type": "text"
+											},
+											{
+												"key": "conniToken",
+												"value": "{{conniToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url_qa}}/api/siesa/v3/conectoresestructuraestandar?idCompania={{idCompania}}&idDocumento=150484",
+											"host": [
+												"{{base_url_qa}}"
+											],
+											"path": [
+												"api",
+												"siesa",
+												"v3",
+												"conectoresestructuraestandar"
+											],
+											"query": [
+												{
+													"key": "idCompania",
+													"value": "{{idCompania}}"
+												},
+												{
+													"key": "idDocumento",
+													"value": "150484"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "V3 Conectores Generar Plano Estandar",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "conniKey",
+												"value": "{{conniKey}}",
+												"type": "text"
+											},
+											{
+												"key": "conniToken",
+												"value": "{{conniToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n        \"Inicial\": [\r\n            {\r\n                \"F_CIA\": \"001\"\r\n            }\r\n        ],\r\n        \"Terceros\": [\r\n            {\r\n                \"F015_EMAIL\": \"GUILLERMOQUINTERO@GMAIL.COM\",\r\n                \"F_CIA\": \"001\",\r\n                \"F_ACTUALIZA_REG\": \"1\",\r\n                \"F200_ID\": \"1152206340\",\r\n                \"F200_NIT\": \"1152206340\",\r\n                \"F200_DV_NIT\": \"1\",\r\n                \"F200_ID_TIPO_IDENT\": \"C\",\r\n                \"F200_IND_TIPO_TERCERO\": \"1\",\r\n                \"F200_RAZON_SOCIAL\": \"FELIPE QUINTERO\",\r\n                \"F200_APELLIDO1\": \"QUINTERO\",\r\n                \"F200_APELLIDO2\": \"LOZANO\",\r\n                \"F200_NOMBRES\": \"GUILLERMO FELIPE\",\r\n                \"F200_NOMBRE_EST\": \"GUILLERMO FELIPE QUINTERO LOZANO\",\r\n                \"F200_IND_CLIENTE\": \"0\",\r\n                \"F200_IND_PROVEEDOR\": \"0\",\r\n                \"F200_IND_EMPLEADO\": \"0\",\r\n                \"F200_IND_ACCIONISTA\": \"0\",\r\n                \"F200_IND_OTROS\": \"0\",\r\n                \"F200_IND_INTERNO\": \"0\",\r\n                \"F015_CONTACTO\": \"GUILLERMO FELIPE QUINTERO LOZANO\",\r\n                \"F015_DIRECCION1\": \"CALLE\",\r\n                \"F015_DIRECCION2\": \"SIEMPRE\",\r\n                \"F015_DIRECCION3\": \"VIVA\",\r\n                \"F015_ID_PAIS\": \"169\",\r\n                \"F015_ID_DEPTO\": \"05\",\r\n                \"F015_ID_CIUDAD\": \"001\",\r\n                \"F015_ID_BARRIO\": \"\",\r\n                \"F015_TELEFONO\": \"\",\r\n                \"F015_FAX\": \"\",\r\n                \"F015_COD_POSTAL\": \"\",\r\n                \"F200_FECHA_NACIMIENTO\": \"12071994\",\r\n                \"F200_ID_CIIU\": \"\",\r\n                \"F200_IND_NO_DOMICILIADO\": \"0\",\r\n                \"F200_IND_ESTADO\": \"0\",\r\n                \"F015_CELULAR\": \"3215564785\"\r\n            }\r\n        ],\r\n        \"Final\": [\r\n            {\r\n                \"F_CIA\": \"001\"\r\n            }\r\n        ]\r\n    }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_qa}}/api/siesa/v3/conectoresgenerarplanoestandar?idCompania={{idCompania}}&idDocumento=150484&nombreConector=API_v1_Terceros",
+											"host": [
+												"{{base_url_qa}}"
+											],
+											"path": [
+												"api",
+												"siesa",
+												"v3",
+												"conectoresgenerarplanoestandar"
+											],
+											"query": [
+												{
+													"key": "idCompania",
+													"value": "{{idCompania}}"
+												},
+												{
+													"key": "idDocumento",
+													"value": "150484"
+												},
+												{
+													"key": "nombreConector",
+													"value": "API_v1_Terceros"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "V3 Conectores Importar Estandar",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "conniKey",
+												"value": "{{conniKey}}",
+												"type": "text"
+											},
+											{
+												"key": "conniToken",
+												"value": "{{conniToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"Inicial\": [\r\n    {\r\n      \"F_CIA\": \"001\"\r\n    }\r\n  ],\r\n  \"Terceros\": [\r\n    {\r\n      \"F_CIA\": \"001\",\r\n      \"F_ACTUALIZA_REG\": \"1\",\r\n      \"F200_ID\": \"1152206340\",\r\n      \"F200_NIT\": \"1152206340\",\r\n      \"F200_DV_NIT\": \"1\",\r\n      \"F200_ID_TIPO_IDENT\": \"C\",\r\n      \"F200_IND_TIPO_TERCERO\": \"1\",\r\n      \"F200_RAZON_SOCIAL\": \"FELIPE QUINTERO\",\r\n      \"F200_APELLIDO1\": \"QUINTERO\",\r\n      \"F200_APELLIDO2\": \"LOZANO\",\r\n      \"F200_NOMBRES\": \"GUILLERMO FELIPE\",\r\n      \"F200_NOMBRE_EST\": \"GUILLERMO FELIPE QUINTERO LOZANO\",\r\n      \"F200_IND_CLIENTE\": \"0\",\r\n      \"F200_IND_PROVEEDOR\": \"0\",\r\n      \"F200_IND_EMPLEADO\": \"0\",\r\n      \"F200_IND_ACCIONISTA\": \"0\",\r\n      \"F200_IND_OTROS\": \"0\",\r\n      \"F200_IND_INTERNO\": \"0\",\r\n      \"F015_CONTACTO\": \"GUILLERMO FELIPE QUINTERO LOZANO\",\r\n      \"F015_DIRECCION1\": \"CALLSE\",\r\n      \"F015_DIRECCION2\": \"SIEMPRE\",\r\n      \"F015_DIRECCION3\": \"VIVA\",\r\n      \"F015_ID_PAIS\": \"169\",\r\n      \"F015_ID_DEPTO\": \"05\",\r\n      \"F015_ID_CIUDAD\": \"001\",\r\n      \"F015_ID_BARRIO\": \"Calasanz\",\r\n      \"F015_TELEFONO\": \"5800055\",\r\n      \"F015_FAX\": \"\",\r\n      \"F015_COD_POSTAL\": \"\",\r\n      \"F015_EMAIL\": \"GUILLERMOQUINTERO@GMAIL.COM\",\r\n      \"F200_FECHA_NACIMIENTO\": \"19940712\",\r\n      \"F200_ID_CIIU\": \"\",\r\n      \"F200_IND_NO_DOMICILIADO\": \"0\",\r\n      \"F200_IND_ESTADO\": \"1\",\r\n      \"F015_CELULAR\": \"3215564785\"\r\n    }\r\n  ],\r\n  \"Final\": [\r\n    {\r\n      \"F_CIA\": \"1\"\r\n    }\r\n  ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_qa}}/api/siesa/v3/conectoresimportarestandar?idCompania={{idCompania}}&idDocumento=150484&nombreDocumento=API_v1_Terceros",
+											"host": [
+												"{{base_url_qa}}"
+											],
+											"path": [
+												"api",
+												"siesa",
+												"v3",
+												"conectoresimportarestandar"
+											],
+											"query": [
+												{
+													"key": "idCompania",
+													"value": "{{idCompania}}"
+												},
+												{
+													"key": "idDocumento",
+													"value": "150484"
+												},
+												{
+													"key": "nombreDocumento",
+													"value": "API_v1_Terceros"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "APIS DINAMICAS",
+							"item": [
+								{
+									"name": "V3 Conectores Dinamicos",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "conniKey",
+												"value": "{{conniKey}}",
+												"type": "text"
+											},
+											{
+												"key": "conniToken",
+												"value": "{{conniToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url_qa}}/api/siesa/v3/conectoresporcompania?idCompania={{idCompania}}",
+											"host": [
+												"{{base_url_qa}}"
+											],
+											"path": [
+												"api",
+												"siesa",
+												"v3",
+												"conectoresporcompania"
+											],
+											"query": [
+												{
+													"key": "idCompania",
+													"value": "{{idCompania}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "V3 Conectores Estructura Dinamico",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "conniKey",
+												"value": "{{conniKey}}",
+												"type": "text"
+											},
+											{
+												"key": "conniToken",
+												"value": "{{conniToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url_qa}}/api/siesa/v3/conectoresestructura?idCompania={{idCompania}}&idDocumento=1",
+											"host": [
+												"{{base_url_qa}}"
+											],
+											"path": [
+												"api",
+												"siesa",
+												"v3",
+												"conectoresestructura"
+											],
+											"query": [
+												{
+													"key": "idCompania",
+													"value": "{{idCompania}}"
+												},
+												{
+													"key": "idDocumento",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "V3 Conectores Generar Plano Dinamico",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "conniKey",
+												"value": "{{conniKey}}",
+												"type": "text"
+											},
+											{
+												"key": "conniToken",
+												"value": "{{conniToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n        \"Inicial\": [\r\n            {\r\n                \"F_CIA\": \"001\"\r\n            }\r\n        ],\r\n        \"Terceros\": [\r\n            {\r\n                \"F_CIA\": \"0001\",\r\n                \"F200_ID\": \"1152206340\",\r\n                \"F200_NIT\": \"1152206340\",\r\n                \"F200_DV_NIT\": \"1\",\r\n                \"F200_RAZON_SOCIAL\": \"FELIPE\",\r\n                \"F200_APELLIDO1\": \"QUINTERO\",\r\n                \"F200_APELLIDO2\": \"LOZANO\",\r\n                \"F200_NOMBRES\": \"FELIPE\"\r\n            }\r\n        ],\r\n        \"Final\": [\r\n            {\r\n                \"F_CIA\": \"001\"\r\n            }\r\n        ]\r\n    }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_qa}}/api/siesa/v3/conectoresgenerarplano?idCompania={{idCompania}}&idDocumento=1&nombreConector=Terceros&validarestructura=false",
+											"host": [
+												"{{base_url_qa}}"
+											],
+											"path": [
+												"api",
+												"siesa",
+												"v3",
+												"conectoresgenerarplano"
+											],
+											"query": [
+												{
+													"key": "idCompania",
+													"value": "{{idCompania}}"
+												},
+												{
+													"key": "idDocumento",
+													"value": "1"
+												},
+												{
+													"key": "nombreConector",
+													"value": "Terceros"
+												},
+												{
+													"key": "validarestructura",
+													"value": "false"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "V3 Conectores Generar Plano Impodatos Dinamico",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "conniKey",
+												"value": "{{conniKey}}",
+												"type": "text"
+											},
+											{
+												"key": "conniToken",
+												"value": "{{conniToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n        \"Inicial\": [\r\n            {\r\n                \"F_CIA\": \"001\"\r\n            }\r\n        ],\r\n        \"Terceros\": [\r\n            {\r\n                \"F_CIA\": \"001\",\r\n                \"F200_ID\": \"1152206340\",\r\n                \"F200_NIT\": \"1152206340\",\r\n                \"F200_DV_NIT\": \"1\",\r\n                \"F200_RAZON_SOCIAL\": \"FELIPE\",\r\n                \"F200_APELLIDO1\": \"QUINTERO\",\r\n                \"F200_APELLIDO2\": \"LOZANO\",\r\n                \"F200_NOMBRES\": \"FELIPE\"\r\n            }\r\n        ],\r\n        \"Final\": [\r\n            {\r\n                \"F_CIA\": \"001\"\r\n            }\r\n        ]\r\n    }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_qa}}/api/siesa/v3/conectoresgenerarplanoimpodatos?idCompania={{idCompania}}&idDocumento=1&nombreConector=Terceros",
+											"host": [
+												"{{base_url_qa}}"
+											],
+											"path": [
+												"api",
+												"siesa",
+												"v3",
+												"conectoresgenerarplanoimpodatos"
+											],
+											"query": [
+												{
+													"key": "idCompania",
+													"value": "{{idCompania}}"
+												},
+												{
+													"key": "idDocumento",
+													"value": "1"
+												},
+												{
+													"key": "nombreConector",
+													"value": "Terceros"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "V3 Conectores Importar Dinamico",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "conniKey",
+												"value": "{{conniKey}}",
+												"type": "text"
+											},
+											{
+												"key": "conniToken",
+												"value": "{{conniToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n        \"Inicial\": [\r\n            {\r\n                \"F_CIA\": \"001\"\r\n            }\r\n        ],\r\n        \"Terceros\": [\r\n            {\r\n                \"F_CIA\": \"001\",\r\n                \"F200_ID\": \"1152206340\",\r\n                \"F200_NIT\": \"1152206340\",\r\n                \"F200_DV_NIT\": \"1\",\r\n                \"F200_RAZON_SOCIAL\": \"FELIPE\",\r\n                \"F200_APELLIDO1\": \"QUINTERO\",\r\n                \"F200_APELLIDO2\": \"LOZANO\",\r\n                \"F200_NOMBRES\": \"FELIPE\"\r\n            }\r\n        ],\r\n        \"Final\": [\r\n            {\r\n                \"F_CIA\": \"001\"\r\n            }\r\n        ]\r\n    }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_qa}}/api/siesa/v3/conectoresimportar?idCompania={{idCompania}}&idInterface=869&idDocumento=1&nombreDocumento=Terceros&validarestructura=true",
+											"host": [
+												"{{base_url_qa}}"
+											],
+											"path": [
+												"api",
+												"siesa",
+												"v3",
+												"conectoresimportar"
+											],
+											"query": [
+												{
+													"key": "idCompania",
+													"value": "{{idCompania}}"
+												},
+												{
+													"key": "idInterface",
+													"value": "869"
+												},
+												{
+													"key": "idDocumento",
+													"value": "1"
+												},
+												{
+													"key": "nombreDocumento",
+													"value": "Terceros"
+												},
+												{
+													"key": "validarestructura",
+													"value": "true"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "V3.1 Conectores Importar Dinamico",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "conniKey",
+												"value": "{{conniKey}}",
+												"type": "text"
+											},
+											{
+												"key": "conniToken",
+												"value": "{{conniToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n        \"Inicial\": [\r\n            {\r\n                \"F_CIA\": \"001\"\r\n            }\r\n        ],\r\n        \"Terceros\": [\r\n            {\r\n                \"F_CIA\": \"001\",\r\n                \"F200_ID\": \"1152206340\",\r\n                \"F200_NIT\": \"1152206340\",\r\n                \"F200_DV_NIT\": \"1\",\r\n                \"F200_RAZON_SOCIAL\": \"FELIPE\",\r\n                \"F200_APELLIDO1\": \"QUINTERO\",\r\n                \"F200_APELLIDO2\": \"LOZANO\",\r\n                \"F200_NOMBRES\": \"FELIPE\"\r\n            }\r\n        ],\r\n        \"Final\": [\r\n            {\r\n                \"F_CIA\": \"001\"\r\n            }\r\n        ]\r\n    }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url_qa}}/api/siesa/v3.1/conectoresimportar?idCompania={{idCompania}}&idSistema=10&idDocumento=1&nombreDocumento=Terceros&validarestructura=true",
+											"host": [
+												"{{base_url_qa}}"
+											],
+											"path": [
+												"api",
+												"siesa",
+												"v3.1",
+												"conectoresimportar"
+											],
+											"query": [
+												{
+													"key": "idCompania",
+													"value": "{{idCompania}}"
+												},
+												{
+													"key": "idSistema",
+													"value": "10"
+												},
+												{
+													"key": "idDocumento",
+													"value": "1"
+												},
+												{
+													"key": "nombreDocumento",
+													"value": "Terceros"
+												},
+												{
+													"key": "validarestructura",
+													"value": "true"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "NOMINA WEB",
+					"item": [
+						{
+							"name": "V3 Nomina Web",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"importacion\": \"<importacion m='2' o='19'>\",\r\n  \"registro\": {\r\n    \"id_cia\": 1,\r\n    \"id_tercero\": \"1152206340\",\r\n    \"nro\": 1,\r\n    \"id_co\": \"001\",\r\n    \"id_proyecto\": \"1\",\r\n    \"id_un\": \"1\",\r\n    \"id_autoliq_sucursal\": \"1\",\r\n    \"id_grupo_empleados\":\"1\",\r\n    \"id_centro_costo\": \"1\",\r\n    \"id_centro_trabajo\": \"1\",\r\n    \"id_tipo_nomina\": \"1\",\r\n    \"id_entidad_afp\": \"1\",\r\n    \"id_entidad_eps\": \"1\",\r\n    \"id_entidad_cesantia\": \"1\",\r\n    \"id_entidad_caja\": \"1\",\r\n    \"id_entidad_arp\": \"1\",\r\n    \"id_entidad_sena\": \"1\",\r\n    \"id_entidad_icbf\": \"1\",\r\n    \"ind_pacto_colectivo\": 1,\r\n    \"id_cargo\": \"1\",\r\n    \"fecha_contrato_hasta\": \"20220511\",\r\n    \"ind_termino_contrato\": 1,\r\n    \"notas\": \"1\",\r\n    \"vlr_adc1\": 1,\r\n    \"vlr_adc2\": 1,\r\n    \"vlr_adc3\": 1,\r\n    \"vlr_adc4\": 1,\r\n    \"txt_adc1\": \"1\",\r\n    \"txt_adc2\": \"1\",\r\n    \"txt_adc3\": \"1\",\r\n    \"txt_adc4\": \"1\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url_qa}}/api/siesa/nominaweb/v3/importar/?idCompania={{idCompania}}",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"siesa",
+										"nominaweb",
+										"v3",
+										"importar",
+										""
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "V3.1 Nomina Web",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"importacion\": \"<importacion m='2' o='22'>\",\r\n  \"parametros\": {\r\n    \"PINDVALORIZA\": \"2\"\r\n  },\r\n  \"registro\": {\r\n    \"EMPRESA\": \"1\",\r\n    \"CONSECUTIVO\": \"1\",\r\n    \"EMPLEADO\": \"1143830497\",\r\n    \"NDC\": \"3\",\r\n    \"CONSECUTIVOTNL\": \"\",\r\n    \"CPTO\": \"052\",\r\n    \"FECHAINICIAL\": \"20241009\",\r\n    \"FECHAFINAL\": \"20241009\",\r\n    \"DIASTNL\": \"0\",\r\n    \"HORAINICIAL\": \"\",\r\n    \"HORAFINAL\": \"\",\r\n    \"VALORTNL\": \"0\",\r\n    \"BASETNL\": \"0\",\r\n    \"OBSTNL\": \"\",\r\n    \"SERIE\": \"\",\r\n    \"NUMEROINC\": \"\",\r\n    \"CODIGODIAG\": \"\",\r\n    \"CLASEINC\": \"1\",\r\n    \"FECHAAT\": \"\",\r\n    \"VALOREMP1\": \"0\",\r\n    \"VALOREMP2\": \"0\",\r\n    \"FECHAINCAPACIDAD\": \"\",\r\n    \"IBC\": \"\",\r\n    \"MESESPROM\": \"0\",\r\n    \"INDPRORROGA\": \"0\",\r\n    \"PRORROGAINC\": \"\",\r\n    \"HORAS\": \"0\",\r\n    \"ENTIDAD\": \"\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url_qa}}/api/siesa/nominaweb/v3.1/importar/?idCompania={{idCompania}}",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"siesa",
+										"nominaweb",
+										"v3.1",
+										"importar",
+										""
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ZEUS",
+			"item": [
+				{
+					"name": "MODULO CONECTIVIDAD",
+					"item": [
+						{
+							"name": "V3 Consultas Estandar",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_qa}}/api/zeus/v3/consultasporcompaniaestandar?idCompania={{idCompania}}",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"zeus",
+										"v3",
+										"consultasporcompaniaestandar"
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "V3 Ejecutar Consulta Estandar",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "816aa12252ff5c2ca2e79cd1cd74ef32",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjRkODQ1OTVjLTA3ODgtNDZmNS05NzExLWUxMmJiY2EyYzQ0YyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcHJpbWFyeXNpZCI6IjE1OWUwYWFiLTAyMGQtNDY4My04ZTIyLThmNWE0MjFkMzA5ZCJ9.8vSiKF_KQZKaM4N6oXn9WQr_3kbKYaUiuT2naT_Rd-s",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_qa}}/api/zeus/v3/ejecutarconsultaestandar?idCompania=8434&descripcion=API_v1_PUNTOATENCION&paginacion=numPag=1|tamPag=100&parametros=ID=19",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"zeus",
+										"v3",
+										"ejecutarconsultaestandar"
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "8434"
+										},
+										{
+											"key": "descripcion",
+											"value": "API_v1_PUNTOATENCION"
+										},
+										{
+											"key": "paginacion",
+											"value": "numPag=1|tamPag=100"
+										},
+										{
+											"key": "parametros",
+											"value": "ID=19"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "APIS DINAMICAS",
+					"item": [
+						{
+							"name": "V3 Conectores Estructura",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_qa}}/api/zeus/v3/conectoresestructura/?idCompania={{idCompania}}&idDocumento=1",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"zeus",
+										"v3",
+										"conectoresestructura",
+										""
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										},
+										{
+											"key": "idDocumento",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "V3 Conectores Generar Sp",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ResultadoLaboratorio\": {\r\n    \"IdToma\": \"\",\r\n    \"IdFormato\": \"\",\r\n    \"xmlFormatData\": {\r\n      \"list\": {\r\n        \"item\": {\r\n          \"campos\": {\r\n            \"item\": [\r\n              {\r\n                \"id\": \"\",\r\n                \"valor\": \"\"\r\n              }\r\n            ]\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url_qa}}/api/zeus/v3/conectoresgenerarsp/?idCompania={{idCompania}}&idDocumento=1",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"zeus",
+										"v3",
+										"conectoresgenerarsp",
+										""
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										},
+										{
+											"key": "idDocumento",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "V3.1 Conectores Importar",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "conniKey",
+										"value": "{{conniKey}}",
+										"type": "text"
+									},
+									{
+										"key": "conniToken",
+										"value": "{{conniToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ResultadoLaboratorio\": {\r\n    \"IdToma\": \"\",\r\n    \"IdFormato\": \"\",\r\n    \"xmlFormatData\": {\r\n      \"list\": {\r\n        \"item\": {\r\n          \"campos\": {\r\n            \"item\": [\r\n              {\r\n                \"id\": \"\",\r\n                \"valor\": \"\"\r\n              }\r\n            ]\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url_qa}}/api/zeus/v3.1/conectoresimportar/?idCompania={{idCompania}}&idSistema=32&idDocumento=1&nombreDocumento=ResultadosLaboratorio",
+									"host": [
+										"{{base_url_qa}}"
+									],
+									"path": [
+										"api",
+										"zeus",
+										"v3.1",
+										"conectoresimportar",
+										""
+									],
+									"query": [
+										{
+											"key": "idCompania",
+											"value": "{{idCompania}}"
+										},
+										{
+											"key": "idSistema",
+											"value": "32"
+										},
+										{
+											"key": "idDocumento",
+											"value": "1"
+										},
+										{
+											"key": "nombreDocumento",
+											"value": "ResultadosLaboratorio"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://servicios.siesacloud.com",
+			"type": "string"
+		},
+		{
+			"key": "base_url_qa",
+			"value": "https://serviciosqa.siesacloud.com",
+			"type": "string"
+		},
+		{
+			"key": "idCompania",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "conniKey",
+			"value": "446fd9a8752aa53ec078e011507db7d9",
+			"type": "string"
+		},
+		{
+			"key": "conniToken",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImNnNGUyYmlxL1Q2YXc0TFNqcEZ0TUZJakwwRmtZNmltc1hlOEtoVGkrdUFrTkpNQURyUyszbU56MzhTdEluMlMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3ByaW1hcnlzaWQiOiIwN2E1ZDc1YS1jYTZjLTRlNzEtODZkZi0wNmY3Yzk5YWU4MWYiLCJleHAiOjE3MTgyOTA4NTl9.-0pXwSDIEN2W7BkWELJ4boqtuOuleojtQAcTUVoha_U",
+			"type": "string"
+		},
+		{
+			"key": "usuario",
+			"value": "gfquinterol@siesa.com",
+			"type": "string"
+		},
+		{
+			"key": "contraseña",
+			"value": "Felipe2070*.",
+			"type": "string"
+		}
+	]
+}

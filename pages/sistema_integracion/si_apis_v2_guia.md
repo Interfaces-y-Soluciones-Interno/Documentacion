@@ -676,3 +676,12 @@ Y al poder usar toda esta información dentro de un sistema propio y si se usa l
 #### MODULO CONECTIVIDAD
 #### APIS DINAMICAS
 -->
+
+<!--
+## **Descargar la Colección ejemplo en Postman** ##
+
+Puede descargar la Colección ejemplo en Postman de las APIs versión dos en el siguiente enlace:
+
+<a target="_blank" class="noCrossRef" href="{{ "postman/CONNEKTA_MICROSERVICIOS_V-2-20250217.postman_collection"}}"> Postman.Collection Download
+-->
+ 
