@@ -1,7 +1,7 @@
 ---
 title: Connekta - APIs Versión dos
 keywords: 
-last_updated: Marzo 3, 2025
+last_updated: Mayo 29, 2025
 tags: #[getting_started]
 #summary: "Inicio APIs Version 2"
 sidebar: sistema_integracion_sidebar
@@ -132,6 +132,8 @@ El primero es cuando se envía la página 1, en ese momento, borra el cache y lo
 Y el segundo se maneja en una variable en los headers del uso del API llamado "Connekta-Cache-Time-Remaining" variable que maneja el tiempo que permanece la información en cache, cuando este tiempo expira se elimina la información del cache y se vuelve a leer y cargar en cache la información desde la base de datos. 
 
 En Connekta, en la documentación siempre se garantiza que inicie desde la página uno.
+
+**Cuando se esta manejando mucha concurrencia se sugiere usar esta versión del API**.
 
 **Uso**:
 
